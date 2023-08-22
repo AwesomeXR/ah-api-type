@@ -7,9 +7,8 @@
   ],
   "scripts": {
     "ci": "prettier --check src && tsc -p tsconfig.json --noEmit && jest --detectOpenHandles",
-    "build": "webpack build && tsc -p tsconfig.json --emitDeclarationOnly -outDir dist",
-    "prepublishOnly": "npm run ci && npm run build",
-    "release": "npm run ci && release-it"
+    "build": "tsc -p tsconfig.build.json -outDir dist",
+    "release": "npm run ci && npm run build && release-it"
   },
   "devDependencies": {
     "@types/jest": "^29.5.0",
