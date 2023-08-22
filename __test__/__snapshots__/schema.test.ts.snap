@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createTsTypeLiteral integer enum 1`] = `"1 | 2 | 3"`;
+
+exports[`createTsTypeLiteral oneOf 1`] = `
+"{
+a?: string
+} | {
+b?: string
+}"
+`;
+
+exports[`createTsTypeLiteral oneOf deep 1`] = `
+"{
+a?: string
+} | {
+b?: string;
+c?: {
+cs1: string
+} | {
+cs2: string
+}
+}"
+`;
+
+exports[`createTsTypeLiteral string enum 1`] = `"\"a\" | \"b\" | \"c\""`;

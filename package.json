@@ -1,0 +1,25 @@
+{
+  "name": "ah-api-type",
+  "version": "3.0.8",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit && jest --detectOpenHandles",
+    "build": "webpack build && tsc -p tsconfig.json --emitDeclarationOnly -outDir dist",
+    "prepublishOnly": "npm run ci && npm run build",
+    "release": "npm run ci && release-it"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/lodash": "^4.14.192",
+    "jest": "^29.6.3",
+    "prettier": "^3.0.2",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
